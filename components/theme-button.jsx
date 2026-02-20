@@ -12,7 +12,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-// Daftar tema kustom yang tersedia (sesuai dengan kelas CSS di globals.css)
 const colorThemes = [
   { value: "theme-pink", label: "Pink" },
   { value: "theme-green", label: "Green" },
@@ -26,14 +25,29 @@ const colorThemes = [
 
 export default function ThemeButton() {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
 
-  // Cari tema yang sedang aktif untuk ditampilkan di tombol
+  // Set mounted = true setelah komponen terpasang di client
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const activeTheme = colorThemes.find(t => t.value === theme)
+
+  // Sebelum mounted, render tombol placeholder (misalnya dengan ukuran yang sama) 
+  // agar layout tidak bergeser saat hidrasi.
+  if (!mounted) {
+    return (
+      <Button variant="secondary" size="sm" className="gap-2 invisible">
+        Pink
+      </Button>
+    )
+  }
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2">
+        <Button variant="secondary" size="sm" className="gap-2">
           {activeTheme ? activeTheme.label : "Theme"}
         </Button>
       </DropdownMenuTrigger>

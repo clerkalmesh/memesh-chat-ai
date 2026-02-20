@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import ThemeButton from "@/components/theme-button";
 import Authentication from "@/components/authentication";
 import { useAuthContext } from "@/context/auth-context";
+import Link from "next/link";
 
 export default function Header() {
     const { user } = useAuthContext();
@@ -16,7 +17,7 @@ export default function Header() {
                 <h2 className="text-2xl font-bold text-primary">MESH AI</h2>
             </div>
             
-            <di className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
                 <ThemeButton />
                 {!user ? (
                     
@@ -25,7 +26,7 @@ export default function Header() {
                     </Authentication>
                 ) : (
                     <div className="flex items-center gap-3">
-                        <Button >Dashboard</Button>
+                        <Link href="/dashboard"><Button >Dashboard</Button></Link>
                         <Image src={user?.photoURL || "/profile.png"} alt="user profile" width={40} height={40} className="rounded-full" />
                     </div>
                 )}

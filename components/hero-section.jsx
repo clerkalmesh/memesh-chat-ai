@@ -1,11 +1,12 @@
 
 import Authentication from "@/components/authentication";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
     
     return (
-        <div className="p-10 flex flex-col items-center justify-center mt-24 md:px-20 lg:px-36 xl:px-48">
-            <h2 className="font-bold text-center text-5xl text-primary/30">
+        <div className="p-10 flex flex-col items-center justify-center mt-24 md:px-20 lg:px-36 xl:px-48 ">
+            <h2 className="font-bold text-center text-5xl text-primary">
                 MESH AI Youtube Short Video Generator Edisi Yeey!
             </h2>
             <p className="text-muted-foreground mt-4 text-center text-2xl">
