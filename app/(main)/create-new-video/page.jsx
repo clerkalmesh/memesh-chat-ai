@@ -1,10 +1,14 @@
 "use client";
 
-import Topic from "./_components/topic";
-import VideoStyle from "./_components/video-style";
-import Voices from "./_components/voices";
-import Captions from "./_components/captions";
-import Preview from "./_components/preview";
+import dynamic from 'next/dynamic';
+
+// Dynamic import dengan SSR dimatikan
+const Topic = dynamic(() => import("./_components/topic"), { ssr: false });
+const VideoStyle = dynamic(() => import("./_components/video-style"), { ssr: false });
+const Voices = dynamic(() => import("./_components/voices"), { ssr: false });
+const Captions = dynamic(() => import("./_components/captions"), { ssr: false });
+const Preview = dynamic(() => import("./_components/preview"), { ssr: false });
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { WandSparkles } from "lucide-react";
@@ -40,3 +44,4 @@ export default function CreateNewVideo() {
         </div>
     );
 };
+
