@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Sidebar,
     SidebarHeader,
@@ -68,7 +70,7 @@ export default function AppSidebar() {
                                 <SidebarMenuItem className="mt-3 mx-3" key={index}>
                                     <SidebarMenuButton isActive={path === item.url} className="p-5">
                                         <Link href={item.url} className="flex items-center gap-3 p-3">
-                                            <menu.icon />
+                                            <item.icon />
                                             <span>{item.title}</span>
                                         </Link>
                                     </SidebarMenuButton>
