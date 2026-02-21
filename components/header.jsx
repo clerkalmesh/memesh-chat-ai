@@ -21,9 +21,7 @@ export default function Header() {
                 <ThemeButton />
                 {!user ? (
                     
-                    <Authentication>
-                        <Button>Get Started</Button>
-                    </Authentication>
+                    <Authentication/>
                 ) : (
                     <div className="flex items-center gap-3">
                         <Link href="/dashboard"><Button >Dashboard</Button></Link>

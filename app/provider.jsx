@@ -36,11 +36,22 @@ export default function Provider({children}) {
         <div>
             <AuthContext.Provider value={{ user }}>
                 <ThemeProvider
-                    attribute="class"
+                    attribute="data-theme"  // gunakan data-theme, bukan class
                     defaultTheme="theme-pink"
-                    enableSystem
+                    enableSystem={false}    // matikan system theme
+                    themes={[
+                        "theme-pink",
+                        "theme-green",
+                        "theme-orange",
+                        "theme-violet",
+                        "theme-yellow",
+                        "theme-peach",
+                        "theme-lavender",
+                        "theme-red"
+                    ]}
+                    storageKey="mesh-theme"
                     disableTransitionOnChange
-                >
+                 >
                     {children}
                 </ThemeProvider>
             </AuthContext.Provider>

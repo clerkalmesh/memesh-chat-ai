@@ -21,9 +21,7 @@ export default function HeroSection() {
             
             <div className="mt-7 gap-8 flex">
                 <Link href="/explore"><Button size="lg" variant="secondary">Explore</Button></Link>
-                <Authentication>
-                    <Button size="lg">Get Started</Button>
-                </Authentication>
+                <Authentication/>
             </div>
         </div>
     );

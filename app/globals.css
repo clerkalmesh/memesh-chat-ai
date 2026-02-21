@@ -84,7 +84,7 @@
   --sidebar-ring: oklch(0.704 0.191 22.216);
 }
 
-.theme-red {
+[data-theme="theme-red"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -119,7 +119,7 @@
 }
 
 /* green theme color */
-.theme-green {
+[data-theme="theme-green"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -154,7 +154,7 @@
 }
 
 /* Orange theme color */
-.theme-orange {
+[data-theme="theme-orange"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -189,7 +189,7 @@
 }
 
 /* violet theme color */
-.theme-violet {
+[data-theme="theme-violet"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -224,7 +224,7 @@
 }
 
 /* yellow theme color */
-.theme-yellow {
+[data-theme="theme-yellow"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -259,7 +259,7 @@
 }
 
 /* pink theme color */
-.theme-pink {
+[data-theme="theme-pink"] {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -294,7 +294,7 @@
 }
 
 /* peach theme color */
-.theme-peach {
+[data-theme="theme-peach"]{
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -329,7 +329,7 @@
 }
 
 /* lavender theme color */
-.theme-lavender {
+[data-theme="theme-lavender"]{
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);

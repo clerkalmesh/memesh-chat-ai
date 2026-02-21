@@ -2,12 +2,13 @@
 
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/config/firebase";
+import { Button } from "@/components/ui/button"
 
 export default function Authentication({ children }) {
     const provider = new GoogleAuthProvider();
     
     const onLoginClick = () => {
-        
+        console.log("click Authentication()");
         signInWithPopup(auth, provider)
         .then((result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
@@ -30,6 +31,6 @@ export default function Authentication({ children }) {
     }
     
     return (
-        <div onClick={() => onLoginClick}>{children}</div>
+        <Button size="lg" onClick={onLoginClick}>Get Started</Button>
     );
 };
