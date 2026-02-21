@@ -27,7 +27,7 @@ export default function Header() {
                 ) : (
                     <div className="flex items-center gap-3">
                         <Link href="/dashboard"><Button >Dashboard</Button></Link>
-                        <Image src={user?.photoURL || "/profile.png"} alt="user profile" width={40} height={40} className="rounded-full" />
+                        <Image src={user?.pictureURL || "/profile.png"} alt="user profile" width={40} height={40} className="rounded-full" />
                     </div>
                 )}
             </div>

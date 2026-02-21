@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { Geist, Geist_Mono, Orbitron, Rajdhani } from "next/font/google";
 import "./globals.css";
-import Provider from "./provider";
+import ConvexClientProvider from "./convex-client-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,9 +38,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${rajdhani.variable} antialiased`}
       >        
-        <Provider>
+        <ConvexClientProvider>
             {children}
-        </Provider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
