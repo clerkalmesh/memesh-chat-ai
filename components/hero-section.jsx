@@ -1,6 +1,7 @@
 
 import Authentication from "@/components/authentication";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
     
@@ -19,7 +20,7 @@ export default function HeroSection() {
             </p>
             
             <div className="mt-7 gap-8 flex">
-                <Button size="lg" variant="secondary">Explore</Button>
+                <Link href="/explore"><Button size="lg" variant="secondary">Explore</Button></Link>
                 <Authentication>
                     <Button size="lg">Get Started</Button>
                 </Authentication>
